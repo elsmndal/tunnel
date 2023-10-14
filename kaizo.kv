@@ -1,0 +1,36 @@
+# main.kv
+
+<MainScreen>:
+    orientation: 'vertical'
+
+    Label:
+        text: 'Kaizo Tunnel'
+        font_size: 30
+        color: 1, 1, 1, 1
+
+    TextInput:
+        id: ip_address_input
+        hint_text: 'IP Address'
+        multiline: False
+        size_hint_y: None
+        height: 40
+
+    TextInput:
+        id: port_number_input
+        hint_text: 'Port Number'
+        multiline: False
+        size_hint_y: None
+        height: 40
+
+    Button:
+        text: 'Connect'
+        on_press: root.on_connect_button_press()
+        size_hint_y: None
+        height: 40
+
+    Label:
+        id: status_label
+        text: ''
+        color: 1, 0, 0, 1
+        size_hint_y: None
+        height: 40
